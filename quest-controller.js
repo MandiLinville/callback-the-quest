@@ -6,7 +6,6 @@ function QuestController() {
     var questionElem = document.getElementById('active-question')
 
     function ready(){
-        debugger
         document.getElementById('spinner').remove()
         getQuestion()
     }
