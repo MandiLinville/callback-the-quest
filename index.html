@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Quest</title>
+    <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>THE QUEST</h1>
+
+    <button onclick="questCtrl.start()">Start</button>
+    <button onclick="questCtrl.reset()">Reset</button>
+
+    <div>
+        <center><p id="narrative">The narrative begins here.</p>
+        <p id='active-question'?> The question will go here</p>
+        <form onsubmit="questCtrl.checkGuess(event)">
+            <input type="text" name="guess" required/>
+            <button type="submit">... I Think?</button>
+            <button type="reset">CLEAR</button>
+        </form> </center>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="quest-service.js"></script>
+    <script src="quest-controller.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+</html>

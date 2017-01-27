@@ -1,0 +1,31 @@
+html{
+    background-image: url('https://s-media-cache-ak0.pinimg.com/originals/fd/5b/29/fd5b2951d655f4d0f485ed914579b8aa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    font-family:'Barrio', cursive;
+    color:whitesmoke;
+}
+h1{
+    font-size:60px;
+}
+#narrative{
+    color:mediumturquoise;
+    font-size:40px;
+}
+button{
+    font-size: large;
+    background-color:lightseagreen;
+    color:white;
+    border-color:mediumseagreen
+}
+#active-question{
+    color:teal;
+    font-size:30px;
+}
+input{
+    background-color:darkseagreen;
+    color:white;
+    font-size:large;
+}
