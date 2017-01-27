@@ -7,7 +7,7 @@ function QuestService(ready){
     var currentQuestionIndex = 0
     var currentQuestion = null
     var questions = null
-    var baseURL = 'https://api.myjson.com/bins/eja21'
+    var baseURL = 'https://api.myjson.com/bins/kuos9'
 
     function loadQuestions(){
         $.get(baseURL).then(function(response){
@@ -18,6 +18,10 @@ function QuestService(ready){
     }
     loadQuestions()
 
+    this.reset = function(){
+        currentQuestionIndex = 0
+    }
+    
     // var questions = [{
     //     narrative: 'As you are walking, you see a large canyon with a spanning bridge. As you approach the bridge, a crazy old dude suddnely appears and asks...',
     //     body: 'What is your name',
@@ -32,7 +36,7 @@ function QuestService(ready){
     //     answer: 'green'
     // }]
 
-    
+
 
     this.getNextQuestion = function(){
         currentQuestion = questions[currentQuestionIndex]

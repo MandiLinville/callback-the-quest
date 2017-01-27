@@ -1,11 +1,12 @@
 function QuestController() {
 
-    var qs = new QuestService(getQuestion)
+    var qs = new QuestService(ready)
 
     var narrativeElem = document.getElementById('narrative')
     var questionElem = document.getElementById('active-question')
 
     function ready(){
+        debugger
         document.getElementById('spinner').remove()
         getQuestion()
     }
@@ -25,6 +26,11 @@ function QuestController() {
         getQuestion()
     }
 
+    this.reset = function (){
+        qs.reset();
+        getQuestion()
+    }
+
     this.checkGuess = function (e){
         e.preventDefault()
         var form = e.target
@@ -38,13 +44,13 @@ function QuestController() {
     }
 
     function onDeath(){
-        narrativeElem.innerText = 'YOU HAVE DIED'
+        narrativeElem.innerText = 'The old man bit your leg off. YOU HAVE DIED'
         questionElem.innerText = ''
 
     }
 
     function onWin(){
-        narrativeElem.innerText = 'The old man steps aside and allows you to continue your quest of eipcness ...'
+        narrativeElem.innerText = 'The old man steps aside and allows you to continue your quest of epicness ...'
         questionElem.innerText = '' 
     }
 
